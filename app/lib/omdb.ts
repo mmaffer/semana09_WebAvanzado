@@ -1,6 +1,6 @@
 import type { OmdbDetail, OmdbSearchResponse, OmdbSearchResult } from "../types/omdb";
 
-const API_KEY = "f1def80d";
+const API_KEY = process.env.OMDB_API_KEY!;
 const BASE_URL = "https://www.omdbapi.com";
 
 export async function getMovieDetail(id: string): Promise<OmdbDetail> {
